@@ -11,8 +11,10 @@ This program does not fully automate the process and may still require many hour
 tok-dl.exe <COMMAND>
 
 Commands:
-  user        Use the provided web page to download all videos from the user that the page belongs to
-  batch-user  Use the web pages in the provided directory to download all videos from the users that the pages belong to
+  user        Use the provided web page to download all videos from the user that the page belongs
+              to
+  batch-user  Use the web pages in the provided directory to download all videos from the users
+              that the pages belong to
   list-file   Download all videos listed in the provided file
   help        Print this message or the help of the given subcommand(s)
 
@@ -43,11 +45,11 @@ Options:
 tok-dl.exe list-file --list-file <LIST_FILE> --download-dir <DOWNLOAD_DIR>
 
 Options:
-  -i, --list-file <LIST_FILE>        Path to plain-text file containing line-separated TikTok video URLs
+  -i, --list-file <LIST_FILE>        Path to plain-text file containing line-separated TikTok video
+                                     URLs
   -d, --download-dir <DOWNLOAD_DIR>  Path of the directory to download the videos to
   -h, --help                         Print help information
 ```
-
 
 ## Guide
 
