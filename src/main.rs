@@ -1,3 +1,5 @@
+// TODO: Automate collecting of URLs using down arrow keys on TikTok website.
+
 use clap::Parser;
 use env_logger::Env;
 use log::{debug, error, info, warn};
@@ -125,7 +127,7 @@ fn download_user(html_page_path: &Path, dst: &Path) {
 }
 
 fn scrape_video_urls<'a>(s: &'a str, username: &str) -> Vec<&'a str> {
-    Regex::new(&format!(r"https://www.tiktok.com/@{}/video/\d+", username))
+    Regex::new(&format!(r"https://www.tiktok.com/@{username}/video/\d+"))
         .unwrap()
         .find_iter(s)
         .map(|mat| mat.as_str())
