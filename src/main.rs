@@ -96,15 +96,15 @@ fn batch_download_user(html_dir_path: &Path, dst: &Path) {
         let username = get_username(&html_page);
         let urls = scrape_video_urls(&html_page, username);
 
-        info!("Downloading {}'s {} videos", username, urls.len());
+        info!("Downloading {username}'s {} videos", urls.len());
 
         let mut dst = dst.to_owned();
         dst.push(username);
         for url in urls {
             if download_video(url, &dst).is_ok() {
-                info!("SUCCESS: {}", url);
+                info!("SUCCESS: {url}");
             } else {
-                warn!("FAILURE: {}", url);
+                warn!("FAILURE: {url}");
             }
         }
     }
@@ -115,13 +115,13 @@ fn download_user(html_page_path: &Path, dst: &Path) {
     let username = get_username(&html_page);
     let urls = scrape_video_urls(&html_page, username);
 
-    info!("Downloading {}'s {} videos", username, urls.len());
+    info!("Downloading {username}'s {} videos", urls.len());
 
     for url in urls {
         if download_video(url, dst).is_ok() {
-            info!("SUCCESS: {}", url);
+            info!("SUCCESS: {url}");
         } else {
-            warn!("FAILURE: {}", url);
+            warn!("FAILURE: {url}");
         }
     }
 }
@@ -151,9 +151,9 @@ fn download_from_list_file(list_file_path: &Path, dst: &Path) {
         .collect::<Vec<_>>()
     {
         if download_video(url, dst).is_ok() {
-            info!("SUCCESS: {}", url);
+            info!("SUCCESS: {url}");
         } else {
-            warn!("FAILURE: {}", url);
+            warn!("FAILURE: {url}");
         }
     }
 }
@@ -186,7 +186,7 @@ fn download_video_with_args(dst: &Path, args: &[&str]) -> Result<(), DownloadErr
             }
         }
         Err(err) => {
-            error!("Failed to create yt-dlp process: {}", err);
+            error!("Failed to create yt-dlp process: {err}");
             Err(DownloadError::UnableToCreateProcess)
         }
     }

@@ -54,16 +54,16 @@ Options:
 ## Guide
 
 ### Download all videos uploaded by a single TikTok user
-1. Follow the steps in the "Download TikTok user's video page" section.
-2. Use the `user` command of tok-dl, entering the path of the HTML file of the web page you just downloaded and the path of the directory you want the downloaded videos to be placed in. e.g. `tok-dl user --html-page "html_pages/The Rock (@therock) Official TikTok.htm" --download-dir downloads/therock`
+1. Follow the steps in the `Download TikTok user's video page` section.
+2. Use the `user` command of tok-dl, entering the path of the HTML file of the web page you just downloaded, and the path of the directory you want the downloaded videos to be placed in. e.g. `tok-dl user --html-page "html_pages/The Rock (@therock) Official TikTok.htm" --download-dir downloads/therock`
 
 ### Download all videos uploaded by multiple TikTok users
-1. Follow the steps in the "Download TikTok user's video page" section for every user whose videos you want to download, and place all the web pages in a single directory.
-2. Use the `batch-user` command of tok-dl, entering the path of the directory containing the HTML files and the path of the directory you want the downloaded videos to be placed in (a subdirectory will be created for each user). e.g. `tok-dl batch-user --html-dir html_pages --download-dir downloads`
+1. Follow the steps in the `Download TikTok user's video page` section for every user whose videos you want to download, and place all the web pages in a single directory.
+2. Use the `batch-user` command of tok-dl, entering the path of the directory containing the HTML files, and the path of the directory you want the downloaded videos to be placed in (a subdirectory will be created for each user). e.g. `tok-dl batch-user --html-dir html_pages --download-dir downloads`
 
 ### Download all videos listed in a plain text file
 1. Create a plain text file (i.e. a `txt` file) and enter one TikTok video URL per line.
-2. Use the `list-file` command of tok-dl, entering the path of the plain text file containing the list of URLs of videos to download and the path of the directory you want the downloaded videos to be placed in (a subdirectory will be created for each user). e.g. `tok-dl batch-user --html-dir html_pages --download-dir downloads`
+2. Use the `list-file` command of tok-dl, entering the path of the plain text file containing the list of URLs of videos to download, and the path of the directory you want the downloaded videos to be placed in (a subdirectory will be created for each user). e.g. `tok-dl list-file --html-dir html_pages --download-dir downloads`
 
 ### Download TikTok user's video page
 1. Visit the TikTok user's page through tiktok.com (the website, not the app) on a desktop/laptop. e.g. https://www.tiktok.com/@therock
